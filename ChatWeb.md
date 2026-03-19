@@ -8,12 +8,13 @@ Chatwoot:
 
 Settings → Inboxes → Add Inbox → Website
 
-<img width="953" height="549" alt="Image" src="https://github.com/user-attachments/assets/61064062-ad5f-4044-942e-a0abace32406" />
+<img width="953" height="549" alt="Image" src="https://github.com/user-attachments/assets/f3072f85-0da5-408f-8ec2-0c3c866be818" />
 
 
 Una vez el inbox creado, vamos a su configuración, arriba donde pone Settings, metemos en Website Domain la URL de nuestra WEB:
 
-<img width="1404" height="932" alt="Image" src="https://github.com/user-attachments/assets/f783d13a-48a5-4b8a-9514-6e0e6dba3956" />
+
+<img width="1404" height="932" alt="Image" src="https://github.com/user-attachments/assets/630c8e6c-574c-4891-9b78-dd9e83a36b46" />
 
 Copiar Website Token.
 
@@ -26,7 +27,7 @@ A la derecha, en Configuration, encontramos el script que va a ir en el HTML de 
 - URL de nuestro Chatwoot
 - Token que nos da Chatwoot
 
-<img width="1385" height="941" alt="Image" src="https://github.com/user-attachments/assets/c39abf87-ce90-412a-b1c3-127d6f7e28f7" />
+<img width="1385" height="941" alt="Image" src="https://github.com/user-attachments/assets/f76693b0-8a89-4fbd-bfc1-05c6091de1d5" />
 
 Lo añadimos en nuestra WEB, antes del cierre de body:
 
@@ -50,6 +51,6 @@ Lo añadimos en nuestra WEB, antes del cierre de body:
 
 En la WEB, debería de quedar así:
 
-<img width="1912" height="977" alt="Image" src="https://github.com/user-attachments/assets/4e29297e-75e9-4355-857a-94d3a353b785" />
+<img width="1912" height="977" alt="Image" src="https://github.com/user-attachments/assets/77202e1d-4578-455e-81d7-8c821e48b018" />
 
-<img width="471" height="761" alt="Image" src="https://github.com/user-attachments/assets/dd9b8c99-d454-45c2-b921-7a41e513dabe" />
+<img width="471" height="761" alt="Image" src="https://github.com/user-attachments/assets/e45c4551-1645-4e56-9a96-b8b5ba9a9649" />
