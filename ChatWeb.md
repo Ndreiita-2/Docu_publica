@@ -1,6 +1,6 @@
-INFORMACIÓN ADICIONAL -> Mi Chatwoot está instalado en una máquina virtual con Ubuntu y docker. La página WEB que estoy usando de pruebas, está en internet mediante Visual Studio Code con la herramienta de Live Server.
-
 # 1. CHATBOT WEB CON CHATWOOT
+
+Mi Chatwoot está instalado en una máquina virtual con Ubuntu y docker. La página WEB que estoy usando de pruebas, está en internet mediante Visual Studio Code con la herramienta de Live Server.
 
 ## 1.1 Crear Inbox Website
 
