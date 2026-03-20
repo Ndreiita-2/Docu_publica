@@ -149,7 +149,7 @@ Aquí metes EXACTAMENTE el mismo script que ya usaste:
 
 ---
 
-## 4️⃣ Activar el módulo
+## Activar el módulo
 
 ```bash
 bin/magento setup:upgrade
