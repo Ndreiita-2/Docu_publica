@@ -54,3 +54,104 @@ En la WEB, debería de quedar así:
 <img width="1912" height="977" alt="Image" src="https://github.com/user-attachments/assets/77202e1d-4578-455e-81d7-8c821e48b018" />
 
 <img width="471" height="761" alt="Image" src="https://github.com/user-attachments/assets/e45c4551-1645-4e56-9a96-b8b5ba9a9649" />
+
+
+# 2. ¿Y con módulos para Magento?
+
+## Estructura básica del módulo
+
+Dentro de Magento:
+
+```
+app/code/TuEmpresa/Chatwoot/
+├── registration.php
+├── etc/module.xml
+└── view/frontend/layout/default.xml
+```
+
+---
+
+## Registrar el módulo
+
+### `registration.php`
+
+```php
+<?php
+use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
+    'TuEmpresa_Chatwoot',
+    __DIR__
+);
+```
+
+---
+
+### `etc/module.xml`
+
+```xml
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="TuEmpresa_Chatwoot" setup_version="1.0.0"/>
+</config>
+```
+
+---
+
+## Insertar el script (la clave)
+
+### `view/frontend/layout/default.xml`
+
+Esto hace que el script se cargue en todo el frontend:
+
+```xml
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ layout="1column"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="chatwoot.script"
+                   template="TuEmpresa_Chatwoot::chatwoot.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
+```
+
+---
+
+## Crear el template con tu script
+
+### `view/frontend/templates/chatwoot.phtml`
+
+Aquí metes EXACTAMENTE el mismo script que ya usaste:
+
+```php
+<script>
+(function(d,t) {
+  var BASE_URL="https://chat.midominio.com";
+  var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=BASE_URL+"/packs/js/sdk.js";
+  s.parentNode.insertBefore(g,s);
+  g.onload=function(){
+    window.chatwootSDK.run({
+      websiteToken: 'TOKEN_AQUI',
+      baseUrl: BASE_URL
+    })
+  }
+})(document,"script");
+</script>
+```
+
+---
+
+## 4️⃣ Activar el módulo
+
+```bash
+bin/magento setup:upgrade
+bin/magento cache:flush
+```
